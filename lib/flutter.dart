@@ -5,15 +5,22 @@ import 'dart:math';
 exec(){
 
   //1
-  // print('Enter Number: ');
-  // int sum=0;
-  // int p=10;
-  // int n=int.parse(stdin.readLineSync()?? '\0');
-  // for(int i=0;i<n;i++){
-    
-  //   sum=n+(n*10+n)+(n*100+n);
-  // }
-  // print(sum);
+   num power = 0;
+  num sum = 0;
+  num res = 0;
+  for (int x = 0; x < 3; x++) {
+    power = pow(10, x) * 5;
+    sum += power;
+    res += sum;
+
+    stdout.write("$sum");
+    if (x == 2) {
+      stdout.write(" = ");
+    } else {
+      stdout.write(" + ");
+    }
+  }
+  stdout.write(res);
 
   //2
   // int sec1=0;
@@ -51,13 +58,13 @@ exec(){
 //     num=num/10;
 //   }while(num<0);
 //   print(num);
-int rows = 6;
-    for(int i = 0 ; i< rows; i++)
-    {
-        for(int j = 0; j<=i;j++)
-        {
-            stdout.write('* ');
-        }
-        stdout.writeln();
-    }
+// int rows = 6;
+//     for(int i = 0 ; i< rows; i++)
+//     {
+//         for(int j = 0; j<=i;j++)
+//         {
+//             stdout.write('* ');
+//         }
+//         stdout.writeln();
+//     }
 }
